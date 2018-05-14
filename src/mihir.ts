@@ -1,8 +1,7 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-// import "core-js/fn/array.find"
-// ...
+import * as _ from "lodash";
+
 export default class Mihir {
   boot() {
-    console.log("hello");
+    _.forEach([1, 2, 3], (_i) => console.log(_i));
   }
 }
