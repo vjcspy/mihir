@@ -1,7 +1,14 @@
-import * as _ from "lodash";
+// core
+import {Redux} from "./modules/redux";
 
-export default class Mihir {
-  boot() {
-    _.forEach([1, 2, 3], (_i) => console.log(_i));
-  }
-}
+export {app, Injectable, ModuleManager} from "./core/app";
+export {GeneralError} from "./core/error";
+
+
+// redux
+export {Action, ActionReducer, Redux} from "./modules/redux";
+
+
+setInterval(() => {
+  Redux.store.dispatch({type: "TICK"});
+}, 5000);
