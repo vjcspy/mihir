@@ -12,13 +12,19 @@ const libraryName = 'mihir';
 export default {
   input: `src/${libraryName}.ts`,
   output: [
-    { file: pkg.main, name: camelCase(libraryName), format: 'umd' },
-    { file: pkg.module, format: 'es' },
+    {file: pkg.main, name: camelCase(libraryName), format: 'umd'},
+    {file: pkg.module, format: 'es'},
   ],
   sourcemap: true,
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
   external: [
-    "lodash"
+    "inversify",
+    "reflect-metadata",
+    "immutable",
+    "lodash",
+    "redux",
+    "rxjs",
+    "redux-observable",
   ],
   watch: {
     include: 'src/**',
@@ -27,7 +33,7 @@ export default {
     // Allow json resolution
     json(),
     // Compile TypeScript files
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({useTsconfigDeclarationDir: true}),
     // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
     commonjs(),
     // Allow node_modules resolution, so you can use 'external' to control
