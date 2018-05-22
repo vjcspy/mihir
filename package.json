@@ -66,8 +66,7 @@
         "statements": 95
       }
     },
-    "collectCoverage": true,
-    "mapCoverage": true
+    "collectCoverage": true
   },
   "devDependencies": {
     "@types/jest": "^22.0.0",
@@ -114,6 +113,7 @@
     "redux": "^4.0.0",
     "redux-observable": "next",
     "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.1.0"
+    "rxjs": "^6.1.0",
+    "typed-immutable-record": "^0.0.6"
   }
 }

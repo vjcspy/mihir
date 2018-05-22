@@ -65,8 +65,7 @@ export interface ModuleConfig {
 
 export class ModuleManager {
 
-
-  static $modules = Map();
+  protected static $modules = Map();
 
   constructor() {
     throw new GeneralError("This class don't accept construct");

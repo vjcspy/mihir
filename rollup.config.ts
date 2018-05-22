@@ -18,13 +18,14 @@ export default {
   sourcemap: true,
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
   external: [
-    "inversify",
-    "reflect-metadata",
+    // "inversify",
+    // "reflect-metadata",
     "immutable",
     "lodash",
-    "redux",
+    // "redux",
     "rxjs",
-    "redux-observable",
+    // "redux-observable",
+    "typed-immutable-record"
   ],
   watch: {
     include: 'src/**',

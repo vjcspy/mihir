@@ -3,12 +3,16 @@ export class GeneralError extends Error {
     super();
   }
 
-  getMessage(): string {
+  toString() {
+    return this.getMessage();
+  }
+
+  protected getMessage(): string {
     this.beforeGetMessage();
     return this.message;
   }
 
-  beforeGetMessage(): void {
+  protected beforeGetMessage(): void {
     /*
      * TODO: implement Translate later
      *
@@ -16,7 +20,4 @@ export class GeneralError extends Error {
      */
   }
 
-  toString() {
-    return this.getMessage();
-  }
 }
